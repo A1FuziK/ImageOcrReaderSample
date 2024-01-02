@@ -109,14 +109,14 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\FuziK\NeuralNetworks\opencv\build\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\opencv\build\include</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\FuziK\NeuralNetworks\opencv\build\x64\vc16\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);C:\FuziK\NeuralNetworks\opencv\build\x64\vc16\lib\opencv_world480d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\opencv\build\x64\vc16\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);opencv_world480d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -164,8 +164,10 @@
     <ClInclude Include="BPNeuralNetwork.h" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Work\Samples\" />
     <Folder Include="Work\Train\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Work\Samples\Sample.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
